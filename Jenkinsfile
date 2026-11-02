@@ -40,7 +40,12 @@ pipeline {
                 sh 'mvn package'
             }
         }
-
+stage('Deploy to Tomcat') {
+    steps {
+        sh 'cp target/myapp.war /opt/tomcat/webapps/myapp.war'
+        echo 'WAR deployed to Tomcat successfully!'
+    }
+}
         stage('Archive WAR') {
             steps {
                 archiveArtifacts artifacts: 'target/*.war',
