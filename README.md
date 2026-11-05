@@ -1,1 +1,1 @@
-Testing automatic Jenkins build using GitHub webhook.
+Testing automatic Jenkins build through GitHub webhook.
